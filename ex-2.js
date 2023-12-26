@@ -2,6 +2,9 @@
 
 const isPalindrome = function (s) {
   //Start Coding here
+  const lowerStr = s.toLowerCase();
+  const cleanString = lowerStr.replace(/[^a-z0-9]/g, "");
+  return cleanString === cleanString.split("").reverse().join("");
 };
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
